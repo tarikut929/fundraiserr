@@ -1,0 +1,28 @@
+{
+  "fundraiseApp": {
+    "fundauthor": {
+      "home": {
+        "title": "Fundauthors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "नया Fundauthor बनाएँ",
+        "createOrEditLabel": "Fundauthor बनाएँ या संपादित करें",
+        "notFound": "No Fundauthors found"
+      },
+      "created": "एक नया Fundauthor [identifier: {{ param }}] तैयार है",
+      "updated": "एक Fundauthor [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Fundauthor [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Fundauthor [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Fundauthor"
+      },
+      "id": "ID",
+      "name": "Name",
+      "username": "Username",
+      "password": "Password",
+      "authorid": "Authorid",
+      "email": "Email"
+    }
+  }
+}

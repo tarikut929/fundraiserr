@@ -52,6 +52,15 @@
             </column>
         </createTable>
 
+        <createTable tableName="project">
+            <column name="project_id" type="varchar(50)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="project_title" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
         <createTable tableName="jhi_user_authority">
             <column name="user_id" type="bigint">
                 <constraints nullable="false"/>

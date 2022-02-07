@@ -1,32 +1,14 @@
-import './home.scss';
-import React, { useEffect, useState } from 'react';
+import './project.scss';
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
-import { Row, Col, Alert, Card, Button } from 'reactstrap';
+import { Row, Col, Alert } from 'reactstrap';
 import { useAppSelector } from 'app/config/store';
 
-export const Home = () => {
-  const name = 1;
-
-  const [Users, fetchUsers] = useState([]);
-  const getData = () => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(res => {
-        fetchUsers(res);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+export const Project = () => {
   const cardInfo = [
-    {
-      image: 'content/images/help.jpg',
-      title: 'Help father and his 20-year old son, Father-Kidney transplant, Son- Bone marrow transplant. Please save the family',
-      message: 'raised by: John B',
-    },
+    { image: 'content/images/help.jpg', title: 'tar', message: 'fdfdddfd' },
     { image: 'content/images/help.jpg', title: 'some', message: 'somdfddf' },
     { image: 'content/images/help.jpg', title: 'dogd', message: 'fsdfsdfsd' },
     { image: 'content/images/help.jpg', title: 'fosd ', message: 'fdskfnkf' },
@@ -38,57 +20,23 @@ export const Home = () => {
   const user = useAppSelector(state => state.userManagement.user);
   const renderCard = (card, index) => {
     return (
-      <div className="card text-center display" style={{ width: '24rem', height: '27rem' }} key={index}>
-        <img src="content/images/help.jpg" alt="donem" />
+      <div className="card text-center" style={{ width: '24rem' }} key={index}>
+        <img src={card.image} alt="donem" />
         <div className="card-body">
-          <div>
-            <h4 className="card-title display-title">{card.name}</h4>
-          </div>
+          <h5 className="card-title">{card.title}</h5>
+          <a href="" className="btn btn-primary">
+            show Detail
+          </a>
         </div>
-        <div>
-          <div>
-            <h6>By: {card.name}</h6>
-          </div>
-          <Button
-            color="primary"
-            className="mt-2 ml-4"
-            tag={Link}
-            to="/project_detail"
-            // onClick={onclick.bind(showIt(card.name))}
-          >
-            Show Detail
-          </Button>
-        </div>
+        <h6>{card.message}</h6>
       </div>
     );
   };
 
   return (
     <Row>
-      <Row className="pad">
-        <div className="mt-3"></div>
-        <span className="hipster rounded">
-          <div className="container mt-5">
-            <div className="row mt-5">
-              <div className="col-sm white text-center">
-                <h4>Need Funds to Pay For a Medical Emergency or Social Cause?</h4>
-              </div>
-
-              <div className="col-sm"></div>
-            </div>
-            <div className="row">
-              <div className="col-sm text-center align-text-bottom">
-                <a href="" className="btn btn-primary">
-                  <h5>Contribute</h5>
-                </a>
-              </div>
-              <div className="col-sm"></div>
-            </div>
-          </div>
-        </span>
-      </Row>
       <Row>
-        <div className="container  row d-flex align-items-center justify-content-center">{Users.map(renderCard)}</div>
+        <div className="container  row d-flex align-items-center justify-content-center">{cardInfo.map(renderCard)}</div>
 
         <h2>
           <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
@@ -172,8 +120,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
-function showIt(id: any) {
-  localStorage.setItem('id', id);
-  console.warn('nnnnfffffffffffd' + id);
-}
+export default Project;

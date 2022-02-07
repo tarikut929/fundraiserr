@@ -17,16 +17,32 @@ export const Brand = () => (
     <span className="brand-title">
       <Translate contentKey="global.title">Fundraise</Translate>
     </span>
-    <span className="navbar-version">{VERSION}</span>
   </NavbarBrand>
 );
 
 export const Home = () => (
   <NavItem>
     <NavLink tag={Link} to="/" className="d-flex align-items-center">
-      <FontAwesomeIcon icon="home" />
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
+export const Project = () => (
+  <NavItem>
+    <NavLink tag={Link} to="/project" className="d-flex align-items-center">
+      <span>
+        <Translate contentKey="global.menu.project">Project</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
+export const Search = () => (
+  <NavItem>
+    <NavLink tag={Link} to="/project" className="d-flex align-items-center">
+      <span>
+        <FontAwesomeIcon icon="search" />
       </span>
     </NavLink>
   </NavItem>

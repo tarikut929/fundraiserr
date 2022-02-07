@@ -1,0 +1,28 @@
+{
+  "fundraiseApp": {
+    "fundauthor": {
+      "home": {
+        "title": "Fundauthors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Fundauthor",
+        "createOrEditLabel": "Create or edit a Fundauthor",
+        "notFound": "No Fundauthors found"
+      },
+      "created": "A new Fundauthor is created with identifier {{ param }}",
+      "updated": "A Fundauthor is updated with identifier {{ param }}",
+      "deleted": "A Fundauthor is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Fundauthor {{ id }}?"
+      },
+      "detail": {
+        "title": "Fundauthor"
+      },
+      "id": "ID",
+      "name": "Name",
+      "username": "Username",
+      "password": "Password",
+      "authorid": "Authorid",
+      "email": "Email"
+    }
+  }
+}

@@ -19,7 +19,7 @@ export const UserManagementDetail = (props: RouteComponentProps<{ login: string 
   const user = useAppSelector(state => state.userManagement.user);
 
   return (
-    <div>
+    <div style={{ border: '1px solid red' }}>
       <h2>
         <Translate contentKey="userManagement.detail.title">User</Translate> [<strong>{user.login}</strong>]
       </h2>
@@ -98,6 +98,7 @@ export const UserManagementDetail = (props: RouteComponentProps<{ login: string 
           <Translate contentKey="entity.action.back">Back</Translate>
         </span>
       </Button>
+      <button>{user.lastName}ddddddsddddd</button>
     </div>
   );
 };
