@@ -71,9 +71,9 @@ export const ProjectDtail = () => {
                 <h3>Help Father And His 20-Year Old Son, Father-Kidney Transplant, Son- Bone Marrow Transplant. Please Save The Family</h3>
               </h5>
             </div>
-            <h6>Ethiopia is greate</h6>
+            <h6>Created by: John B</h6>
           </div>
-          <div className="ml-2  row d-flex align-items-center justify-content-center">{cardInfo.map(renderCard)}</div>
+          <div className="ml-2 mt-0 row d-flex align-items-center justify-content-center">{cardInfo.map(renderCard)}</div>
         </div>
         <div className="col">
           <div className="card">

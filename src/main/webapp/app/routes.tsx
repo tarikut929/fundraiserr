@@ -16,6 +16,7 @@ import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 import Project from './modules/projects/project';
 import ProjectDtail from './modules/project-detail/project-detail';
+import Checkout from './modules/checkout/checkout';
 
 const Account = Loadable({
   loader: () => import(/* webpackChunkName: "account" */ 'app/modules/account'),
@@ -33,6 +34,7 @@ const Routes = () => {
       <Switch>
         <ErrorBoundaryRoute path="/project" component={Project} />
         <ErrorBoundaryRoute path="/project_detail" component={ProjectDtail} />
+        <ErrorBoundaryRoute path="/checkout" component={Checkout} />
         <ErrorBoundaryRoute path="/login" component={Login} />
         <ErrorBoundaryRoute path="/logout" component={Logout} />
         <ErrorBoundaryRoute path="/account/register" component={Register} />
